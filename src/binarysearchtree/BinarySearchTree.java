@@ -14,7 +14,7 @@ public class BinarySearchTree {
         }
     }
 
-    public boolean insert(int value) {
+    public boolean insert(int value) { //worse case: O(n)
         Node newNode = new Node(value);
         if (root == null) {
             root = newNode;
@@ -39,7 +39,7 @@ public class BinarySearchTree {
         }
     }
 
-    public boolean contains(int value) {
+    public boolean contains(int value) { //worse case: O(n)
         if (root == null) return false;
         Node temp = root;
         while (temp != null) {
