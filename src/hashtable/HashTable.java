@@ -19,7 +19,7 @@ public class HashTable {
 
     public HashTable() {
         dataMap = new Node[size];
-    }
+    } //0(1)
 
     private int hash(String key) { // O(n)
         int hash = 0;
@@ -31,7 +31,7 @@ public class HashTable {
         return hash;
     }
 
-    public void set(String key, int value) { //O(n)
+    public void set(String key, int value) { //O(1)
         int index = hash(key);
         Node newNode = new Node(key, value);
         if (dataMap[index] == null) {
@@ -53,7 +53,7 @@ public class HashTable {
         }
     }
 
-    public int get(String key) { //O(n)
+    public int get(String key) { //O(1)
         int index = hash(key);
         Node temp = dataMap[index];
         while (temp != null) {

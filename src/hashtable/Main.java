@@ -14,13 +14,6 @@ public class Main {
 
         System.out.println( myHashTable.keys() );
 
-    	/*
-        	EXPECTED OUTPUT:
-        	----------------
-        	[paint, bolts, nails, tile, lumber]
-
-    	*/
-
     }
 
 }
