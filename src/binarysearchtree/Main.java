@@ -27,11 +27,18 @@ public class Main {
         myBST.rInsert(2);
         myBST.rInsert(1);
         myBST.rInsert(3);
-        myBST.rInsert(2);
+
 
         System.out.println("\nRoot: " + myBST.root.value);
         System.out.println("\nLeft: " + myBST.root.left.value);
         System.out.println("\nRight: " + myBST.root.right.value);
+
+        myBST.deleteNode(2);
+
+        System.out.println("\nRoot: " + myBST.root.value);
+        System.out.println("\nLeft: " + myBST.root.left.value);
+        System.out.println("\nRight: " + myBST.root.right);
+
 
 
     }

@@ -85,5 +85,44 @@ public class BinarySearchTree {
         rInsert(root, value);
     }
 
+    private Node deleteNode(Node currentNode, int value){
+        if(currentNode == null) return null; //if the value is not in the tree
+
+        if(value < currentNode.value){
+            currentNode.left = deleteNode(currentNode.left, value);
+        }else if(value > currentNode.value){
+            currentNode.right = deleteNode(currentNode.right, value);
+
+            //To here, it's going to traverse left and right and either determinate if the value we are looking for it's or not in the tree
+            //it will go here until it doesn't and then next loop we go to the else and the possibilities
+        }else { // if we trigger this else, it means there are 4 possibilities
+            if (currentNode.left == null && currentNode.right == null) { //this is a leaf node
+                return null;
+            } else if (currentNode.left == null) { // a node that is open on the left and has a node on the right
+                currentNode = currentNode.right;
+            } else if (currentNode.right == null) { //a node that is open on the right an has a node on the left
+                currentNode = currentNode.left;
+            } else { //or a node on the left and the right
+                int subTreeMin = minValue(currentNode.right);
+                currentNode.value = subTreeMin;
+                currentNode.right = deleteNode(currentNode.right, subTreeMin);
+
+            }
+
+        }
+
+        return currentNode;
+    }
+
+    public void deleteNode(int value){
+        deleteNode(root, value);
+    }
+
+    public int minValue(Node currentNode){
+        while(currentNode.left != null){
+            currentNode = currentNode.left;
+        }
+        return currentNode.value;
+    }
 
 }
