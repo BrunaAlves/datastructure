@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class SelectionSort {
 
-    public static void selectionSort(int[] array) {
+    public static void selectionSort(int[] array) { // time complexity O(n^2), and space complexity O(1)
         for (int i = 0; i < array.length; i++) {
             int minIndex = i; //ex. minIndex = 0
             for (int j = i+1; j < array.length; j++) { // compare the minIndex with the rest of the array, index 2

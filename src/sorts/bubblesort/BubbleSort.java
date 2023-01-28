@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class BubbleSort {
 
-    public static void bubbleSort(int[] array) { //O(1), because we don't have to make a copy
+    public static void bubbleSort(int[] array) { // time complexity O(n^2), and space complexity O(1)
         for (int i = array.length - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
                 if (array[j] > array[j+1]) { // compare if the first value(ex. value 4, index 1) is bigger that the second value (ex. value 2, index 2)
