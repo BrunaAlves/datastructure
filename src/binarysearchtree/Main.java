@@ -74,6 +74,17 @@ public class Main {
 
         */
 
+        System.out.println("\nDFS PostOrder:");
+        System.out.println( myBST.DFSPostOrder() );
+
+        /*
+            EXPECTED OUTPUT:
+            ----------------
+            DFS PostOrder:
+            [18, 27, 21, 52, 82, 76, 47]
+
+        */
+
 
 
 
