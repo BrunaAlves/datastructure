@@ -63,6 +63,17 @@ public class Main {
 
         */
 
+        System.out.println("\nDFS PreOrder:");
+        System.out.println( myBST.DFSPreOrder() );
+
+        /*
+            EXPECTED OUTPUT:
+            ----------------
+            DFS PreOrder:
+            [47, 21, 18, 27, 76, 52, 82]
+
+        */
+
 
 
 
