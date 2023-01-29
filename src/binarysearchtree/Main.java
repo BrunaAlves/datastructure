@@ -85,6 +85,17 @@ public class Main {
 
         */
 
+        System.out.println("\nDFS InOrder:");
+        System.out.println( myBST.DFSInOrder() );
+
+        /*
+            EXPECTED OUTPUT:
+            ----------------
+            DFS InOrder:
+            [18, 21, 27, 47, 52, 76, 82]
+
+        */
+
 
 
 

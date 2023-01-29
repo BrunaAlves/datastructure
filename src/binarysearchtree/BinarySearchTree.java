@@ -115,6 +115,25 @@ public class BinarySearchTree {
         return results;
     }
 
+    public ArrayList<Integer> DFSInOrder() { // Tree Traversal: Depth First Search, InOrder
+        ArrayList<Integer> results = new ArrayList<>();
+
+        class Traverse {
+            Traverse(Node currentNode) {
+                if (currentNode.left != null) {
+                    new Traverse(currentNode.left);
+                }
+                results.add(currentNode.value);
+                if (currentNode.right != null) {
+                    new Traverse(currentNode.right);
+                }
+            }
+        }
+
+        new Traverse(root);
+        return results;
+    }
+
     private boolean rContains(Node currentNode, int value){
         if(currentNode == null) return false;
         if(currentNode.value == value) return true;
